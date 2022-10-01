@@ -1,0 +1,116 @@
+create database  testdb
+
+The drop data base statement is used to drop an existing sql database
+
+drop database testdb
+
+for creating the backup of an existing database
+
+backup database testdb
+to disk = "filepath';
+
+with differential , you can backup all the data that has changed since the last backup
+
+backup database testdb
+to disk = 'file path'
+with differential;
+
+create table persons(
+personid int,
+lastname varchar(244),
+firstname varchar(255),
+address varchar(255),
+city varchar(255),
+)
+
+-- a copy of an existing table can also  be created using
+creat table
+
+create table person1 as 
+select personid,lastname,
+from persons
+
+--the sql drop statement is used to drop an existing table in a database
+
+drop database testdb
+
+
+--truncate table statement is used to delete the data inside a table but not the table itself
+
+truncate table perons
+
+--alter table statement is used to delete, add or modify columns in an existing table
+
+alter table persons
+add column name datatyp
+
+alter person1
+add country varchar(300)
+
+alter table persons1
+alter column dateofbirth year;
+
+--SQL CONSTRAINTS ARE USED TO SPECIFY RULES FOR THE DATA IN A TABLE ---
+
+1- Not Null - Ensures that columns cann't have a null value
+2 - Unique - Ensures all the values in a column are different
+3 - Primary Key - A combination of not null and unique.
+Uniquely identifies each row in a table
+4 - Foreign Key - Prevent actions that would destroy link between tables.
+5 - Check - Ensures that values in a column satisfies a specific condition.
+6 - Create index - used to create and retreive data from the database very quickly.
+
+
+EXAmple --
+create table Ehtesham(
+Age int not null,
+Country varchar(255) not null,
+Car  varchar(255) not null,
+);
+
+not null command on changing/altering table
+
+alter table Ehtesham
+modify age int not null;
+
+-unique
+create table Ehtesham(
+Age int not null unique,
+Country varchar(255) not null,
+Car  varchar(255) not null,
+Unique(id)
+);
+
+to apply unique constraints on multiple columns use this
+
+create table ehtesham(
+age int not null,
+first name varchar(255) not null,
+lastname varchar(255) not null,
+id int
+constraint uc_ehtesham unique(id,lastname)
+);
+
+--primary Key--
+primary key must contain unique values and cann't have null values
+
+create table shani(
+age int not null,
+firstname varchar(255),
+id int,
+Primary Key(id)
+);
+
+
+--to apply primary key on multiple columns use this--
+create table shani(
+age int not null,
+firstname varchar(255),
+id int,
+Constraint pk-shani primary key(id,firstname)
+);
+
+--primary key is a paren key and foreign key is a seconday key
+
+
+

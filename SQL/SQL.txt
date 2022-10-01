@@ -1,0 +1,20 @@
+sql stands for structure query language
+
+Every table is broken up into smaller entities called fields.
+
+The field in the customer table consist of customerId, customerName,Contact Name, Address etc
+
+A record is also called a row.
+Column is a vertical entity.
+
+* sql keywords are not case sensitive
+select is same as SELECT
+
+**Important SQL Commands**
+
+*/** there are so many duplicate values in the columns, and if you want to get only unique values, then you must have use DISTINCT **/
+
+insert statement is used to insert new records in the table.
+
+The update statement is used to modify the existing record in the table.
+update, set, where
